@@ -39,7 +39,10 @@ except:
 
 
 import urllib3
+import urllib3.contrib.pyopenssl
+
 urllib3.disable_warnings()
+urllib3.contrib.pyopenssl.inject_into_urllib3()
 
 # Set a parser object
 parser = argparse.ArgumentParser()
